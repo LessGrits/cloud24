@@ -1,0 +1,380 @@
+@font-face {
+  font-family: "FuturaBT";
+  src: url("fonts/futura_PT.ttf");
+}
+* {
+  font-family: "Poppins";
+  color: #fff;
+}
+
+h2 {
+  font-family: "FuturaBT";
+}
+
+.container {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.main-btn {
+  border-radius: 5px 5px 5px 5px;
+  background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
+  padding: 10px 20px;
+  min-width: 120px;
+}
+
+.main-title {
+  text-align: center;
+  color: #ffffff;
+  font-family: "FuturaBT";
+  font-size: 7vw;
+  line-height: 8vw;
+  font-weight: bold;
+}
+
+.description .main-title {
+  letter-spacing: 0.48px;
+  padding: 10px 10px 0;
+}
+.description__subtitle {
+  margin: 10px 0;
+  opacity: 0.9;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0.4px;
+}
+.description .search-panel {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.description .search-panel__input {
+  background: #5543cd;
+  border-radius: 5px 0 0 5px;
+  width: 100%;
+  padding-left: 25px;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.35px;
+}
+.description .search-panel__input::placeholder {
+  opacity: 0.3;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 3vw;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 0.35px;
+}
+.description .search-panel__icon {
+  position: absolute;
+  font-size: 10px;
+  top: calc(50% - 5px);
+  left: 10px;
+  color: #60daff;
+}
+.description__text {
+  font-size: 4vw;
+  font-weight: 500;
+  line-height: 20px;
+  font-family: Poppins;
+  letter-spacing: 0.8px;
+  margin: 5px 0 10px;
+}
+
+.header {
+  background-image: url(img/header-bg.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 300px;
+}
+.header .container {
+  max-width: 300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.header .header__top {
+  margin: 10px 0;
+}
+.header .header__top .logo img {
+  display: block;
+  margin: 0 auto;
+}
+.header .header__top .menu {
+  min-width: 320px;
+  background: #414dbc;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  border-radius: 0 0 30px 30px;
+  z-index: 1;
+}
+.header .header__top .menu__links {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.header .header__top .menu__link {
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.45px;
+  text-align: center;
+}
+.header .header__top .menu__link a {
+  color: #fff;
+}
+.header .header__top .menu__link:hover {
+  border-radius: 5px;
+  background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
+}
+.header .header__top .menu__link_icon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  font-size: 35px;
+}
+.header .header__top .menu__link_icon a {
+  color: #fff;
+}
+.header .header__top .hide {
+  background: none;
+  height: 0;
+}
+.header .header__top .hide .menu__link:not(:nth-child(6n)) {
+  display: none;
+}
+.header .main-btn {
+  border-radius: 0 5px 5px 0;
+  background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
+  padding: 10px 20px;
+}
+.header .weather {
+  display: flex;
+  flex-direction: column;
+  background: #3d12b3;
+  padding: 0 0 10px;
+}
+.header .weather__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 0 0 10px;
+  background: #471eb8;
+}
+.header .weather__header img {
+  width: 25vw;
+}
+.header .weather__header-body {
+  margin: 0 0 0 10px;
+}
+.header .weather__title {
+  opacity: 0.92;
+  color: #ffffff;
+  font-family: Poppins;
+  font-size: 4vw;
+  font-weight: 500;
+  line-height: 5vw;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+.header .weather__subtitle {
+  margin: 5px 0 0 0;
+  font-family: Poppins;
+  font-size: 3vw;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.5px;
+}
+.header .weather__info {
+  display: flex;
+  flex-direction: column;
+}
+.header .weather__temp {
+  background: #471eb8;
+  margin: 0 0 10px;
+}
+.header .weather__temp .overlay {
+  background: url(img/temp-bg.png) no-repeat center;
+  background-size: contain;
+}
+.header .weather__temp .temp-value {
+  padding: 20px 0 10px;
+  font-size: 15vw;
+  text-align: center;
+}
+.header .weather__temp .temp-value sup {
+  font-size: 20vw;
+}
+.header .weather__temp .about-clouds {
+  text-align: center;
+  padding: 0 0 10px;
+}
+.header .weather__other-data {
+  background: #471eb8;
+  display: flex;
+  flex-direction: column;
+}
+.header .weather__indicators {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+}
+.header .weather__indicator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .weather__indicator .type {
+  margin: 0 0 5px;
+  width: 15vw;
+}
+.header .weather__indicator .value {
+  font-size: 4vw;
+  font-weight: 400;
+  letter-spacing: 2.4px;
+}
+.header .weather__indicator .value span {
+  font-weight: 500;
+  letter-spacing: 1.1px;
+}
+.header .weather__description {
+  font-family: Arial;
+}
+.header .weather__description h3 {
+  margin: 20px 0 5px;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: 400;
+}
+.header .weather__description p {
+  opacity: 0.8;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.main {
+  min-width: 300px;
+  background: #2d0aa1;
+}
+.main .main-btn {
+  margin: 0 auto 10px;
+}
+.main .description__body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .laptop {
+  display: flex;
+  justify-content: center;
+}
+.main .laptop img {
+  width: 90%;
+}
+.main .faq .main-title {
+  margin: 20px 0 20px;
+}
+.main .faq .accordions .accordion {
+  padding: 10px 10px;
+  border-radius: 5px;
+  border: 1px solid #5239af;
+}
+.main .faq .accordions .accordion__header {
+  opacity: 0.9;
+  font-family: Poppins;
+  font-size: 5vw;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: 0.45px;
+  position: relative;
+  cursor: pointer;
+  padding: 0 20px 0 0;
+}
+.main .faq .accordions .accordion__header::after {
+  content: "";
+  background-image: url(img/down_arrow.png);
+  background-repeat: no-repeat;
+  width: 20px;
+  height: 12px;
+  display: block;
+  position: absolute;
+  top: calc( 50% - 6px);
+  right: 5px;
+}
+.main .faq .accordions .accordion__text {
+  opacity: 0.8;
+  font-family: Poppins;
+  font-size: 4vw;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.38px;
+  display: none;
+}
+.main .faq .accordions .show {
+  background-image: linear-gradient(-70deg, #210594 0%, #4114b8 100%);
+}
+.main .faq .accordions .show .accordion__text {
+  display: block;
+}
+.main .faq .accordions .show .accordion__header:after {
+  background-image: url(img/top_arrow.png);
+}
+.main .partners {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.main .partners .partner-overlay {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.footer {
+  min-width: 300px;
+  padding: 20px 0;
+  display: flex;
+  background-image: linear-gradient(to bottom, #210594 0%, #4114b8 100%);
+  opacity: 0.8;
+}
+.footer__text {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0.14px;
+}
+.footer__text span {
+  color: #0cb1f9;
+  letter-spacing: 0.14px;
+  text-transform: uppercase;
+}
+.footer .social-icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 50vw;
+}
+
+/*# sourceMappingURL=style.css.map */
