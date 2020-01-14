@@ -7,7 +7,7 @@
   color: #fff;
 }
 
-h2 {
+h2, h3, h4 {
   font-family: "FuturaBT";
 }
 
@@ -17,7 +17,7 @@ h2 {
 }
 
 .main-btn {
-  border-radius: 5px 5px 5px 5px;
+  border-radius: 5px;
   background-image: linear-gradient(to right, #00bfff 0%, #007ddb 100%);
   padding: 10px 20px;
   min-width: 120px;
@@ -25,8 +25,6 @@ h2 {
 
 .main-title {
   text-align: center;
-  color: #ffffff;
-  font-family: "FuturaBT";
   font-size: 7vw;
   line-height: 8vw;
   font-weight: bold;
@@ -36,11 +34,11 @@ h2 {
   letter-spacing: 0.48px;
   padding: 10px 10px 0;
 }
+.description__body {
+  padding: 0 10px;
+}
 .description__subtitle {
   margin: 10px 0;
-  opacity: 0.9;
-  color: #ffffff;
-  font-family: Poppins;
   font-size: 4vw;
   font-weight: 400;
   line-height: 20px;
@@ -56,17 +54,14 @@ h2 {
   border-radius: 5px 0 0 5px;
   width: 100%;
   padding-left: 25px;
-  color: #ffffff;
-  font-family: Poppins;
   font-size: 3vw;
   font-weight: 400;
   line-height: 36px;
   letter-spacing: 0.35px;
 }
 .description .search-panel__input::placeholder {
-  opacity: 0.3;
-  color: #ffffff;
-  font-family: Poppins;
+  opacity: 0.5;
+  color: #fff;
   font-size: 3vw;
   font-weight: 400;
   line-height: 36px;
@@ -83,8 +78,6 @@ h2 {
   font-size: 4vw;
   font-weight: 500;
   line-height: 20px;
-  font-family: Poppins;
-  letter-spacing: 0.8px;
   margin: 5px 0 10px;
 }
 
@@ -104,7 +97,7 @@ h2 {
 .header .header__top {
   margin: 10px 0;
 }
-.header .header__top .logo img {
+.header .header__top .logo__img {
   display: block;
   margin: 0 auto;
 }
@@ -126,15 +119,12 @@ h2 {
   align-items: center;
 }
 .header .header__top .menu__link {
-  font-family: Poppins;
   font-size: 18px;
   font-weight: 500;
   line-height: 32px;
   letter-spacing: 0.45px;
   text-align: center;
-}
-.header .header__top .menu__link a {
-  color: #fff;
+  padding: 0 5px;
 }
 .header .header__top .menu__link:hover {
   border-radius: 5px;
@@ -146,15 +136,15 @@ h2 {
   right: 25px;
   font-size: 35px;
 }
-.header .header__top .menu__link_icon a {
-  color: #fff;
-}
-.header .header__top .hide {
+.header .header__top .close {
   background: none;
   height: 0;
 }
-.header .header__top .hide .menu__link:not(:nth-child(6n)) {
+.header .header__top .close .menu__link {
   display: none;
+}
+.header .header__top .hide {
+  top: -100px;
 }
 .header .main-btn {
   border-radius: 0 5px 5px 0;
@@ -175,16 +165,11 @@ h2 {
   margin: 0 0 10px;
   background: #471eb8;
 }
-.header .weather__header img {
-  width: 25vw;
-}
 .header .weather__header-body {
   margin: 0 0 0 10px;
 }
 .header .weather__title {
   opacity: 0.92;
-  color: #ffffff;
-  font-family: Poppins;
   font-size: 4vw;
   font-weight: 500;
   line-height: 5vw;
@@ -216,10 +201,7 @@ h2 {
   font-size: 15vw;
   text-align: center;
 }
-.header .weather__temp .temp-value sup {
-  font-size: 20vw;
-}
-.header .weather__temp .about-clouds {
+.header .weather__temp .about-weather {
   text-align: center;
   padding: 0 0 10px;
 }
@@ -227,10 +209,11 @@ h2 {
   background: #471eb8;
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
 .header .weather__indicators {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: stretch;
 }
 .header .weather__indicator {
@@ -245,28 +228,24 @@ h2 {
 }
 .header .weather__indicator .value {
   font-size: 4vw;
-  font-weight: 400;
   letter-spacing: 2.4px;
 }
-.header .weather__indicator .value span {
+.header .weather__indicator span {
   font-weight: 500;
   letter-spacing: 1.1px;
 }
-.header .weather__description {
+.header .weather-description {
   font-family: Arial;
 }
-.header .weather__description h3 {
+.header .weather-description__title {
   margin: 20px 0 5px;
   text-align: center;
   font-size: 5vw;
-  font-weight: 400;
 }
-.header .weather__description p {
+.header .weather-description_text {
   opacity: 0.8;
-  color: #ffffff;
   font-family: Arial;
   font-size: 4vw;
-  font-weight: 400;
   line-height: 20px;
 }
 
@@ -286,14 +265,15 @@ h2 {
   display: flex;
   justify-content: center;
 }
-.main .laptop img {
+.main .laptop__img {
   width: 90%;
 }
 .main .faq .main-title {
-  margin: 20px 0 20px;
+  padding: 20px 0;
 }
 .main .faq .accordions .accordion {
   padding: 10px 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #5239af;
 }
@@ -303,10 +283,9 @@ h2 {
   font-size: 5vw;
   font-weight: 500;
   line-height: 30px;
-  letter-spacing: 0.45px;
   position: relative;
   cursor: pointer;
-  padding: 0 20px 0 0;
+  padding: 0 25px 0 0;
 }
 .main .faq .accordions .accordion__header::after {
   content: "";
@@ -316,16 +295,14 @@ h2 {
   height: 12px;
   display: block;
   position: absolute;
-  top: calc( 50% - 6px);
+  top: calc(50% - 6px);
   right: 5px;
 }
 .main .faq .accordions .accordion__text {
   opacity: 0.8;
   font-family: Poppins;
   font-size: 4vw;
-  font-weight: 400;
   line-height: 30px;
-  letter-spacing: 0.38px;
   display: none;
 }
 .main .faq .accordions .show {
@@ -374,7 +351,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 50vw;
+  width: 200px;
 }
 
 /*# sourceMappingURL=style.css.map */

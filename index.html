@@ -15,9 +15,9 @@
     <div class="container">
         <div class="header__top">
             <div class="logo">
-                <img src="img/logo.png" alt="logo">
+                <img class="logo__img" src="img/logo.png" alt="logo">
             </div>
-            <nav class="menu hide" id="menu" >
+            <nav class="menu close" id="menu" >
                 <ul class="menu__links" >
                     <li class="menu__link"><a href="#" >Home</a></li>
                     <li class="menu__link"><a href="#" >Map</a></li>
@@ -25,7 +25,7 @@
                     <li class="menu__link"><a href="#" >Contact</a></li>
                     <li class="menu__link"><a href="#" >Get App</a></li>
                     <li class="menu__link_icon">
-                        <a href="javascript:void(0)" id="menu-icon">
+                        <a href="#" id="menu-icon">
                             <i class="fa fa-bars"></i>
                         </a>
                     </li>
@@ -39,20 +39,20 @@
                     <p class="description__subtitle">Yet too often some very human cultural artifacts really lead the business down the certain routes.</p>
                     <div class="search-panel">
                         <i class="fas fa-search search-panel__icon"></i>
-                        <input class="search-panel__input" type="text" placeholder="Search Zip, City, Place" >
-                        <button class="main-btn">Get Update</button>
+                        <input id="search-field" class="search-panel__input" type="text" placeholder="Search Zip, City, Place" >
+                        <button id="search-btn" class="main-btn">Get Update</button>
                     </div>
                     <p class="description__text">Best way to know your city weather.</p>
                 </div>
             </div>
             <div class="weather">
                 <div class="weather__header">
-                    <img src="img/weather-header.png" alt="">
+                    <img id="weather__icon" src="img/weather-header.png" alt="">
                     <div class="weather__header-body">
                         <h3 class="weather__title">
                             Weather Report
                         </h3>
-                        <h4 class="weather__subtitle">
+                        <h4 id="date-place" class="weather__subtitle">
                             29th May 2019, Golapgonj, Sylhet
                         </h4>
                     </div>
@@ -60,25 +60,25 @@
                 <div class="weather__info">
                     <div class="weather__temp">
                         <div class="overlay">
-                            <p class="temp-value">37 &deg</p>
-                            <p class="about-clouds">Cloud & Sunshine</p>
+                            <p id="temp-field" class="temp-value">37 &#176;</p>
+                            <p id="about-weather" class="about-weather">Cloud & Sunshine</p>
                         </div>
                     </div>
                     <div class="weather__other-data">
                         <div class="weather__indicators">
                             <div class="weather__indicator">
                                 <img src="img/layer_1.png" alt="" class="type">
-                                <span class="value">4 <span>mm/h</span></span></div>
+                                <div><span id="pressure" class="value">4</span> <span>mm/h</span></div></div>
                             <div class="weather__indicator">
                                 <img src="img/layer_2.png" alt="" class="type">
-                                <span class="value">7 <span>mph</span></span></div>
+                                <div><span id="humidity"  class="value">7</span> <span>mph</span></div></div>
                             <div class="weather__indicator">
                                 <img src="img/layer_3.png" alt="" class="type">
-                                <span class="value">5 <span>m/s</span></span></div>
+                                <div><span id="wind-speed" class="value">5</span> <span>m/s</span></div></div>
                         </div>
-                        <div class="weather__description">
-                            <h3>Today’s Weather Forecast</h3>
-                            <p>Yet too often some very human cultural artifacts really lead the business down the certain routes. Data should underlie every business decision.</p>
+                        <div class="weather-description">
+                            <h3 class="weather-description__title" >Today’s Weather Forecast</h3>
+                            <p class="weather-description__text">Yet too often some very human cultural artifacts really lead the business down the certain routes. Data should underlie every business decision.</p>
                         </div>
                     </div>
                 </div>
@@ -100,7 +100,7 @@
                  </div>
             </div>
             <div class="laptop">
-                <img src="img/laptop.png" alt="laptop">
+                <img class="laptop__img" src="img/laptop.png" alt="laptop">
             </div>
         </section>
         <section class="faq">
