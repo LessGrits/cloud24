@@ -1,33 +1,36 @@
 const menu = document.getElementById("menu");
 const menuIcon = document.getElementById("menu-icon");
 
+
 menuIcon.addEventListener("click",() => {
     menu.classList.toggle("close");
 });
 
+
 const accordions = document.querySelector('.accordions');
 
 accordions.addEventListener("click",(event)=>{
-   let target = event.target.closest(".accordion");
-    console.log(target.classList);
+   const target = event.target.closest(".accordion");
+   if(!target) {
+       return null;
+   }
     target.classList.toggle("show");
 
 });
 
-
-let prevScrollPos = window.pageYOffset;
-window.addEventListener('scroll', ()=> {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos < currentScrollPos) {
-        menu.classList.add("hide");
-        if(!menu.classList.contains("close")){
-            menu.classList.add("close");
+(function scrollHideMenu(){
+    let prevScrollPos = window.pageYOffset;
+    window.addEventListener('scroll', ()=> {
+        let currentScrollPos = window.pageYOffset;
+        if (prevScrollPos < currentScrollPos) {
+            menu.classList.add("hide");
+        } else {
+            menu.classList.remove("hide");
         }
-    } else {
-        menu.classList.remove("hide");
-    }
-    prevScrollPos = currentScrollPos;
-});
+        prevScrollPos = currentScrollPos;
+    });
+})();
+
 
 
 const key = 'f8494e6ce0f5a7af7cff0a26a09c3343';

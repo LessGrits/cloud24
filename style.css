@@ -12,7 +12,7 @@ h2, h3, h4 {
 }
 
 .container {
-  max-width: 300px;
+  max-width: 1430px;
   margin: 0 auto;
 }
 
@@ -30,26 +30,32 @@ h2, h3, h4 {
   font-weight: bold;
 }
 
-.description .main-title {
-  letter-spacing: 0.48px;
-  padding: 10px 10px 0;
+.main-section {
+  padding-bottom: 20px;
 }
-.description__body {
+.main-section .description .main-title {
+  letter-spacing: 0.48px;
+  padding: 14px 10px 0;
+}
+.main-section .description__body {
   padding: 0 10px;
 }
-.description__subtitle {
-  margin: 10px 0;
+.main-section .description__subtitle {
+  margin: 10px auto;
   font-size: 4vw;
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0.4px;
 }
-.description .search-panel {
+.main-section .description .search-panel {
   display: flex;
   justify-content: center;
   position: relative;
 }
-.description .search-panel__input {
+.main-section .description .search-panel .main-btn {
+  width: 43%;
+}
+.main-section .description .search-panel__input {
   background: #5543cd;
   border-radius: 5px 0 0 5px;
   width: 100%;
@@ -59,7 +65,7 @@ h2, h3, h4 {
   line-height: 36px;
   letter-spacing: 0.35px;
 }
-.description .search-panel__input::placeholder {
+.main-section .description .search-panel__input::placeholder {
   opacity: 0.5;
   color: #fff;
   font-size: 3vw;
@@ -67,18 +73,18 @@ h2, h3, h4 {
   line-height: 36px;
   letter-spacing: 0.35px;
 }
-.description .search-panel__icon {
+.main-section .description .search-panel__icon {
   position: absolute;
   font-size: 10px;
   top: calc(50% - 5px);
   left: 10px;
   color: #60daff;
 }
-.description__text {
+.main-section .description__text {
   font-size: 4vw;
   font-weight: 500;
   line-height: 20px;
-  margin: 5px 0 10px;
+  margin: 5px auto 10px;
 }
 
 .header {
@@ -88,14 +94,9 @@ h2, h3, h4 {
   background-repeat: no-repeat;
   min-width: 300px;
 }
-.header .container {
-  max-width: 300px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
 .header .header__top {
-  margin: 10px 0;
+  margin: 0 0 10px;
+  padding: 30px 0 0;
 }
 .header .header__top .logo__img {
   display: block;
@@ -107,7 +108,7 @@ h2, h3, h4 {
   width: 100vw;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   opacity: 0.9;
   border-radius: 0 0 30px 30px;
   z-index: 1;
@@ -138,13 +139,12 @@ h2, h3, h4 {
 }
 .header .header__top .close {
   background: none;
-  height: 0;
 }
 .header .header__top .close .menu__link {
   display: none;
 }
 .header .header__top .hide {
-  top: -100px;
+  top: -220px;
 }
 .header .main-btn {
   border-radius: 0 5px 5px 0;
@@ -156,6 +156,8 @@ h2, h3, h4 {
   flex-direction: column;
   background: #3d12b3;
   padding: 0 0 10px;
+  width: 90%;
+  margin: 0 auto;
 }
 .header .weather__header {
   display: flex;
@@ -204,6 +206,10 @@ h2, h3, h4 {
 .header .weather__temp .about-weather {
   text-align: center;
   padding: 0 0 10px;
+  text-transform: uppercase;
+}
+.header .weather__temp .weather-description__title {
+  font-weight: 500;
 }
 .header .weather__other-data {
   background: #471eb8;
@@ -213,7 +219,7 @@ h2, h3, h4 {
 }
 .header .weather__indicators {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
 }
 .header .weather__indicator {
@@ -224,7 +230,6 @@ h2, h3, h4 {
 }
 .header .weather__indicator .type {
   margin: 0 0 5px;
-  width: 15vw;
 }
 .header .weather__indicator .value {
   font-size: 4vw;
@@ -266,10 +271,15 @@ h2, h3, h4 {
   justify-content: center;
 }
 .main .laptop__img {
-  width: 90%;
+  width: 80%;
 }
 .main .faq .main-title {
   padding: 20px 0;
+}
+.main .faq .accordions {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1169px;
 }
 .main .faq .accordions .accordion {
   padding: 10px 10px;
@@ -304,6 +314,7 @@ h2, h3, h4 {
   font-size: 4vw;
   line-height: 30px;
   display: none;
+  padding: 10px 0;
 }
 .main .faq .accordions .show {
   background-image: linear-gradient(-70deg, #210594 0%, #4114b8 100%);
@@ -317,15 +328,12 @@ h2, h3, h4 {
 .main .partners {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   flex-wrap: wrap;
+  padding: 100px 0;
 }
-.main .partners .partner-overlay {
-  background-color: #fff;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  justify-content: center;
+.main .partners img {
+  cursor: pointer;
 }
 
 .footer {
@@ -335,23 +343,279 @@ h2, h3, h4 {
   background-image: linear-gradient(to bottom, #210594 0%, #4114b8 100%);
   opacity: 0.8;
 }
-.footer__text {
+.footer .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.footer .container .footer__text {
   font-family: Roboto;
   font-size: 14px;
   font-weight: 500;
   line-height: 28px;
   letter-spacing: 0.14px;
+  padding: 0 0 0 10px;
 }
-.footer__text span {
+.footer .container .footer__text .author {
   color: #0cb1f9;
   letter-spacing: 0.14px;
   text-transform: uppercase;
 }
-.footer .social-icons {
+.footer .container .social-icons {
   display: flex;
   justify-content: space-between;
-  margin: 0 auto;
-  width: 200px;
+}
+.footer .container .social-icons img {
+  cursor: pointer;
+  padding: 0 10px;
+}
+.footer .chat {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+}
+
+@media all and (min-width: 480px) {
+  .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-section .description {
+    max-width: 600px;
+  }
+  .main-section .description__subtitle {
+    width: 88%;
+    font-size: 16px;
+    line-height: 32px;
+  }
+  .main-section .description__text {
+    margin: 10px auto 15px;
+    width: 88%;
+    font-size: 16px;
+  }
+  .main-section .description .search-panel__input {
+    padding: 5px 0 5px 30px;
+    font-size: 14px;
+  }
+  .main-section .description .search-panel__input::placeholder {
+    font-size: 14px;
+  }
+  .main-section .weather-description__text {
+    width: 88%;
+    margin: 0 auto;
+    line-height: 20px;
+    line-height: 20px;
+  }
+
+  .main .faq .accordions .accordion__header {
+    font-size: 18px;
+  }
+  .main .faq .accordions .accordion__text {
+    font-size: 15px;
+  }
+  .main .partners {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media all and (min-width: 600px) {
+  .main-btn {
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  .main-title {
+    font-size: 48px;
+    padding-bottom: 50px;
+  }
+
+  .header .weather__title {
+    font-size: 28px;
+  }
+  .header .weather__subtitle {
+    font-size: 20px;
+  }
+  .header .weather__temp .about-weather {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+  .header .weather__measure {
+    font-size: 22px;
+  }
+  .header .weather-description__title {
+    font-size: 18px;
+  }
+  .header .weather-description__text {
+    font-size: 14px;
+    max-width: 380px;
+  }
+  .header .weather__around-value {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .footer .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media all and (min-width: 768px) {
+  .main-title {
+    margin-top: 20px;
+    line-height: 74px;
+  }
+
+  .main-section .description {
+    padding-left: 10px;
+  }
+  .main-section .description__body {
+    padding: 0;
+  }
+  .main-section .description .search-panel__input {
+    padding: 22px 0 22px 65px;
+    max-width: 543px;
+  }
+  .main-section .description .search-panel__icon {
+    font-size: 30px;
+    top: calc(50% - 15px);
+    left: 30px;
+  }
+
+  .header .header__top {
+    display: flex;
+    align-items: flex-start;
+    padding-left: 25px;
+  }
+  .header .header__top .menu {
+    max-width: 580px;
+    right: 25px;
+    top: 20px;
+  }
+  .header .header__top .menu__links {
+    flex-direction: row;
+    margin: 0;
+    justify-content: flex-end;
+  }
+  .header .header__top .menu__link {
+    display: block;
+    padding: 10px 15px;
+  }
+  .header .header__top .menu__link_icon {
+    display: none;
+  }
+  .header .header__top .hide {
+    top: -100px;
+  }
+  .header .header__top .close .menu__link {
+    display: block;
+  }
+  .header .main-btn {
+    font-size: 20px;
+    padding: 10px 17px;
+  }
+  .header .weather {
+    max-width: 800px;
+  }
+  .header .weather__header {
+    justify-content: flex-start;
+    padding: 15px 0 20px 22px;
+  }
+  .header .weather__info {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .header .weather__indicator {
+    justify-content: flex-start;
+  }
+  .header .weather__indicator .value {
+    padding-left: 20px;
+    font-size: 48px;
+  }
+  .header .weather__temp {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    max-width: 300px;
+  }
+  .header .weather__temp .temp-value {
+    font-size: 85px;
+    padding: 94px 54px 20px 40px;
+  }
+  .header .weather__other-data {
+    margin-left: 12px;
+    justify-content: space-around;
+    padding: 28px 16px 19px 25px;
+  }
+  .header .weather__other-data .weather__indicators {
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 412px;
+    width: 54%;
+  }
+  .header .weather__other-data .weather__indicators .weather__indicator {
+    flex-direction: row;
+    padding-bottom: 33px;
+  }
+  .header .weather-description__title {
+    text-align: left;
+  }
+  .header .weather-description__text {
+    text-align: left;
+    margin: 0;
+  }
+
+  .weather__info {
+    display: flex;
+  }
+
+  .main .main-btn {
+    margin: 20px auto 40px;
+    padding: 23px 64px;
+    font-size: 22px;
+  }
+}
+@media all and (min-width: 900px) {
+  .header .weather__title {
+    line-height: 74px;
+  }
+
+  .main-section .description__subtitle {
+    margin: 0;
+    padding: 30px 0 49px;
+  }
+  .main-section .description__text {
+    margin: 0;
+    padding: 30px 0;
+    line-height: 30px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .main-section {
+    padding-top: 100px;
+    flex-direction: row;
+  }
+
+  .header {
+    height: 100vh;
+  }
+  .header .description {
+    width: 42%;
+  }
+  .header .weather {
+    width: 55%;
+  }
+}
+@media all and (min-width: 1430px) {
+  .header .header__top .menu {
+    right: calc((100vw - 1430px)/2);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
